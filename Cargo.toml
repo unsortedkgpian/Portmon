@@ -1,0 +1,23 @@
+[package]
+name = "port-monitor"
+version = "0.1.0"
+edition = "2021"
+authors = ["Aditya Kumar(unsoredkgpian)"]
+description = "A beautiful network port monitor with decorative output"
+
+[[bin]]
+name = "portmon"
+path = "src/main.rs"
+
+[dependencies]
+sysinfo = "0.35.2"
+colored = "3.0.0"
+tabled = "0.20.0"
+serde = { version = "1.0", features = ["derive"] }
+clap = { version = "4.5.40", features = ["derive"] }
+chrono = { version = "0.4.41", features = ["serde"] }
+anyhow = "1.0.98"
+
+[dev-dependencies]
+tokio-test = "0.4.4"
+
